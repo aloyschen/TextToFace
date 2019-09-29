@@ -1,7 +1,4 @@
 import cv2
-import math
-import config
-import dnnlib
 import pickle
 import numpy as np
 from dnnlib import tflib
