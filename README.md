@@ -10,10 +10,10 @@
 
 Short explanation of encoding approach:
 
-0) Bert is used for transforming sentence to embedding
-1) Original pre-trained StyleGAN generator is used for generating images
-2) Pre-trained ResNet network is used for transforming a reference image and generated image into high-level features space
-3) Simple Model is used for transforming Text Embedding and image into high-level features space
+1) Bert is used for transforming sentence to embedding
+2) Original pre-trained StyleGAN generator is used for generating images
+3) Pre-trained ResNet network is used for transforming a reference image and generated image into high-level features space
+4) Simple Model is used for transforming Text Embedding and image into high-level features space
 
 **More examples you can find in the [Jupyter notebook](https://github.com/aloyschen/TextToFace/blob/master/play_text_to_face.ipynb)**
 
@@ -40,7 +40,7 @@ You can generate sentence embedding with [bert-as-service](https://github.com/ha
 2) Start the BERT service
 > bert-serving-start -model_dir ./model/chinese_L-12_H-768_A-12 -num_worker=4 
 
-bert chinese model download [百度云](https://pan.baidu.com/s/1YNtlySQlqFmcDgTMuRKO7w)
+bert chinese model download address [百度云链接](https://pan.baidu.com/s/1YNtlySQlqFmcDgTMuRKO7w)
 
 ### Generating your own text and image dataset
 You can describe face image by yourself, like this:
