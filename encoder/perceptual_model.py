@@ -60,6 +60,8 @@ class PerceptualModel:
         self.sess.run([self.features_weight_vgg.initializer, self.ref_img_features_vgg.initializer])
         self.loss += self.vgg_loss * tf.reduce_mean(tf.abs(self.features_weight_vgg * self.ref_img_features_vgg - self.features_weight_vgg * generated_img_features), axis=None)
         self.loss += self.pixel_loss * tf.reduce_mean(tf.keras.losses.logcosh(self.features_weight * self.ref_img_features, self.features_weight * generated_image))
+
+
     def set_reference_images(self, images_list):
         assert(len(images_list) != 0 and len(images_list) <= self.batch_size)
         loaded_image = load_images(images_list, self.img_size)

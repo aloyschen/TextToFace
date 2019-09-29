@@ -224,7 +224,7 @@ To obtain other datasets, including LSUN, please consult their corresponding pro
 
 Once the datasets are set up, you can train your own StyleGAN networks as follows:
 
-1. Edit [train.py](./train.py) to specify the dataset and training configuration by uncommenting or editing specific lines.
+1. Edit [train.py](trainTextToFace.py) to specify the dataset and training configuration by uncommenting or editing specific lines.
 2. Run the training script with `python train.py`.
 3. The results are written to a newly created directory `results/<ID>-<DESCRIPTION>`.
 4. The training may take several days (or weeks) to complete, depending on the configuration.
