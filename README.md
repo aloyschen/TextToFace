@@ -8,7 +8,7 @@
 
 ![example image](./example.png)
 
-Short explanation of encoding approach: 
+Short explanation of encoding approach:<br>
 0) Bert is used for transforming sentence to embedding
 1) Original pre-trained StyleGAN generator is used for generating images
 2) Pre-trained ResNet network is used for transforming a reference image and generated image into high-level features space
@@ -23,7 +23,7 @@ You can generate latent representations of your own images using two scripts:
 
 2) Download the stylegan pre-train model ([百度云链接](https://pan.baidu.com/s/1CuTKhAG2cdDo_RV5E6V9FA)), put the stylegan.pkl to model folder
 
-3) ### Training ResNet50 encoder
+3) Training ResNet50 encoder
 train your own with trainResnet.py or download my [pre-trained model](https://pan.baidu.com/s/14QaGTltjpeErBVM23jGIFw)! Put the model in model/finetuned_resnet.h5<br>
 [Origin github](https://github.com/pbaylies/stylegan-encoder/blob/master/README.md)
 
@@ -39,7 +39,7 @@ You can generate sentence embedding with [bert-as-service](https://github.com/ha
 2) Start the BERT service
 > bert-serving-start -model_dir ./model/chinese_L-12_H-768_A-12 -num_worker=4 
 
-bert chinese model download [百度云]()
+bert chinese model download [百度云](https://pan.baidu.com/s/1YNtlySQlqFmcDgTMuRKO7w)
 
 ### Generating your own text and image dataset
 You can describe face image by yourself, like this:
@@ -49,4 +49,5 @@ You can describe face image by yourself, like this:
 Used image from [FHHQ dataset](https://github.com/NVlabs/ffhq-dataset)
 
 ### Train text embedding model
+The model is simple with some Dense layer
 > python trainTextToFace.py
