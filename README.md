@@ -8,7 +8,8 @@
 
 ![example image](./example.png)
 
-Short explanation of encoding approach:<br>
+Short explanation of encoding approach:
+
 0) Bert is used for transforming sentence to embedding
 1) Original pre-trained StyleGAN generator is used for generating images
 2) Pre-trained ResNet network is used for transforming a reference image and generated image into high-level features space
