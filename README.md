@@ -1,8 +1,18 @@
-## StyleGAN &mdash; Encoder for Official TensorFlow Implementation
+## StyleGAN Bert &mdash; convert text to face 
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg?style=plastic)
 ![TensorFlow 1.10](https://img.shields.io/badge/tensorflow-1.10-green.svg?style=plastic)
 ![cuDNN 7.3.1](https://img.shields.io/badge/cudnn-7.3.1-green.svg?style=plastic)
 ![License CC BY-NC](https://img.shields.io/badge/license-CC_BY--NC-green.svg?style=plastic)
+
+*You can convert text to face image!!! Thanks to @Puzer and @pbaylies for the original style Encoder*
+
+![example image](./example.png)
+
+Short explanation of encoding approach:
+0) Bert is used for transforming sentence to embedding
+1) Original pre-trained StyleGAN generator is used for generating images
+2) Pre-trained ResNet network is used for transforming a reference image and generated image into high-level features space
+3) Simple Model is used for transforming Text Embedding and image into high-level features space
 
 *These people are real &ndash; latent representation of them was found by using perceptual loss trick. Then this representations were moved along "smiling direction" and transformed back into images*
 
@@ -13,7 +23,6 @@ Short explanation of encoding approach:
 3) Optimization is performed only for latent representation which we want to obtain. 
 4) Upon completion of optimization you are able to transform your latent vector as you wish. For example you can find a "smiling direction" in your latent space, move your latent vector in this direction and transform it back to image using the generator. 
 
-**New scripts for finding your own directions will be realised soon. For now you can play with existing ones: smiling, age, gender.**
 **More examples you can find in the [Jupyter notebook](https://github.com/Puzer/stylegan/blob/master/Play_with_latent_directions.ipynb)**
 
 ### Generating latent representation of your images
